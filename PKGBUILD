@@ -9,7 +9,7 @@ license=('0BSD')
 source=("https://github.com/badwm/bawm/archive/$pkgname-$pkgver.tar.gz")
 build() {
   cd "$pkgname-${pkgver}"
-  ./configure --prefix=/usr
+  ./configure
   make
 }
 
