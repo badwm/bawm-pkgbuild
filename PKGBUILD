@@ -9,8 +9,7 @@ license=('0BSD')
 source=("https://github.com/badwm/bawm/archive/$pkgname-$pkgver.tar.gz")
 build() {
   cd "bawm-$pkgname-${pkgver}"
-  autoreconf
-  automake --add-missing
+  autoreconf || automake --add-missing
   ./configure
   make
 }
@@ -19,4 +18,4 @@ package() {
   cd "$pkgname-${pkgver}"
   make DESTDIR="$pkgdir" install
 }
-md5sums=('e4e3f3a7ebee5ce5e12927151b6d4b6d')
+md5sums=('e6149604e57ddcb95be99929270bde57')
